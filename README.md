@@ -10,5 +10,8 @@ Si está parado, entonces:
 2.- Reinicia el servicio apache2
 Para comprobarlo, para el servicio. Ejecuta el script en segundo plano y observa si lo reinicia y crea el archivo.
 3.- Además del script, crea una tarea programada, de forma que ese script se ejecute cada 6 horas, todos los días. Y si el ordenador está apagado, se debe ejecutar la próxima vez que se inicie, transcurrido cinco minutos.
- 
+
+[Pantallazo que muestra el script en gedit](ComprobarApache.png)
+[Pantallazo del crontab con la tarea programada del script](crontab_comprobarApache.png)
 [Pantallazo del "comprobarApache.sh" funcionando](ej1_funcionando.png)
+
