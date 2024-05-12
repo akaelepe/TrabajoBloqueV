@@ -43,3 +43,4 @@ fi
 #Bloque principal
 comprobarRoot
 ComprobarApache 
+[Pantallazo del "comprobarApache.sh" funcionando](ej1_funcionando.png)
