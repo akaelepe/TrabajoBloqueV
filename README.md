@@ -1,7 +1,7 @@
 ## Trabajo Bloque V
 #### Trabajo realizado por Javier Barrero, Jose María Jaén y Alejandro Lamprea Pérez.
 <img src="https://cdn-icons-png.flaticon.com/512/2037/2037149.png" style="width: 25px; height: 25px;"/> Índice 
-1. [Ejercicio 1](#ComprobarApache.png)
+1. [Ejercicio 1](ComprobarApache.png)
 
 <img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/27a1.png" style="width: 18px; height: 18px;"/>     **Ejercicio 1**
 #### *Enunciado*  
