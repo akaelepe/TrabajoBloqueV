@@ -49,28 +49,43 @@ fecha=$(date +%d-%m-%Y-%H-%M)
 
 #Funciones
 
+#Esta función comprueba si el usuario está en modo root.
 comprobarRoot ()
 {
 if [ `id -u` != 0 ]
-then 
-	echo "No estás como administrador"
-	exit
+then
+    echo "No estás como administrador"
+    exit
 fi
 }
+
+#Esta función realiza un analisis de estado de apache2, dicho analisis se redirigirá a un informe que previamente hemos creado llamado estado.txt. Posteriormente se leera el informe y se buscará dentro de este la palabra "running". Terminaremos comprobando si el script se ha ejecutado bien ( es decir igual a 0) o se ha ejecutado mal ( es decir diferente a 0).
+#También hemos aplicado un "sleep" al final para que el script espere unos 60 segundos antes de ejecutarse de nuevo. Esto hace que el script compruebe el estado cada minutos.
 ComprobarApache ()
 {
-systemctl status apache2 > $informe
-cat $informe | grep -w "running" > /dev/null 2>&1
-if [ $? -ne 0 ];
-	then
-	 	echo "Error-Apache: $fecha" > /root/ApacheError.tmp
-	 	systemctl restart apache2
-fi
- }
-
+while true
+do
+    systemctl status apache2 > $informe
+    cat $informe | grep -w "running" > /dev/null 2>&1
+   	 if [ $? -ne 0 ];
+   		 then
+        		 echo "Error-Apache: $fecha" > /root/ApacheError.tmp
+        		 systemctl restart apache2
+         fi
+         sleep 60
+done
+}
 #Bloque principal
 comprobarRoot
-ComprobarApache.
+
+ComprobarApache &
+#Esta condición realiza la ejecución del script a los 5 minutos de estar encendido el equipo.
+if [ "$(systemctl is-system-running)" == "poweroff" ];
+    then
+   	 sleep 300
+   	 /home/javi/TRABAJOSCRIPTS/comprobarApache.sh
+fi
+
 ```
 #### *Screenshots*
 [Pantallazo que muestra el script en gedit](comprobar_Apache_final.png)  
