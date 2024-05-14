@@ -1,7 +1,7 @@
 ## Trabajo Bloque V
 #### Trabajo realizado por Javier Barrero, Jose María Jaén y Alejandro Lamprea Pérez.
 <img src="https://cdn-icons-png.flaticon.com/512/2037/2037149.png" style="width: 25px; height: 25px;"/> Índice 
-1. [Ejercicio 1](ComprobarApache.png)
+1. [Ejercicio 1](comprobar_Apache_final.png)
 <br>
 <br>
 <br>
@@ -73,7 +73,7 @@ comprobarRoot
 ComprobarApache.
 ```
 #### *Screenshots*
-[Pantallazo que muestra el script en gedit](ComprobarApache.png)  
+[Pantallazo que muestra el script en gedit](comprobar_Apache_final.png)  
 [Pantallazo del crontab con la tarea programada del script](crontab_comprobarApache.png)  
 [Pantallazo del "comprobarApache.sh" funcionando](ej1_funcionando.png)  
 
