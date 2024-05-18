@@ -405,7 +405,49 @@ usuarios.csv `
 #### *Bloque del script*  
 <details>
 	<sumary>Script 4</sumary>
+
+```
+#!/bin/bash
+#Autor: Jose María Jaén, Alejandro Lamprea, Javier Barrero
+#Versión: 1.0
+#Fecha:15-05-24
+#Descripción: Este script crea usuarios de forma automática.
+#Parámetros/Variables
+#Declaramos las variables nombreUsuario, numUsuario y fecha para la ejecución de nuestro script.
+nombreUsuario=$1
+numUsuario=$2
+fecha=$(date +"%Y-%m-%d %H:%M")
+
+#Funciones
+#Bloque principal
+clear
+#Utilizamos un if que: Mientras que el número de parametros que se introduzcan no sean 2 nos recordará que debemos introducir 2 parámetros y si no es así nos echará del script.
+#Despues recorrerá una secuencia que empezará por el numero 1 e irá recorriendo los siguientes numeros de 1 en 1. 
+if [ $# -ne 2 ]; then
+  echo "Introduce dos parámetros:<nombreUsuario> y :<numUsuario>"
+  exit
+fi
+#A continuación recorrerá una secuencia que empezará por el numero 1 e irá recorriendo los siguientes numeros de 1 en 1. 
+#Más tarde crearemos un nuevo usuario con su nuevo directorio y especificaremos que la contraseña quede encriptada o cifrada. Hemos tenido que utilizar el OpenSSL para poder cifrar la contraseña.
+#Después forzaremos al usuario a cambiar su contraseña la próxima vez que inicie sesión.
+#Finalmente redirigiremos los datos obtenidos de nuestras dos anteriores variables a un archivo .tmp.
+for i in $(seq 1 1 $numUsuario)
+    do
+      nombre_usuario="$nombreUsuario$i"
+      password="$nombre_usuario"
+	 sudo useradd -m -p $(echo -n "$password" | openssl passwd -1 -stdin) "$nombre_usuario"
+    sudo chage -d 0 "$nombre_usuario"
+
+ echo "$nombre_usuario:$password" >> usuariosCreados-$fecha.tmp
+ done
+cat "usuariosCreados-$fecha.tmp"
+```
+
+
 </details>
+
+#### *Screenshots*  
+
 <br>
 <br>
 <br>
