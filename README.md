@@ -317,7 +317,11 @@ do
 	menu
 done  
 ```  
-
+#### *Screenshots*
+[Pantallazo que muestra el script en gedit(1)](imagenes/Ejercicio2_parte1.png)  
+[Pantallazo que muestra el script en gedit(2)](imagenes/Ejercicio2_parte2.png)  
+[Pantallazo que muestra el script en gedit(3)](imagenes/Ejercicio2_parte3.png)   
+[Pantallazo del "usuariosBloqueados.sh" funcionando](imagenes/Ejercicio2_corriendo.png)  
     
 <br>
 <br>
