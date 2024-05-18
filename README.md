@@ -328,9 +328,11 @@ do
 done  
 ```
 </details>  
+
 <br>
 <br>
-#### *Screenshots*
+
+#### *Screenshots*  
 [Pantallazo que muestra el script en gedit(1)](imagenes/Ejercicio2_parte1.png)  
 [Pantallazo que muestra el script en gedit(2)](imagenes/Ejercicio2_parte2.png)  
 [Pantallazo que muestra el script en gedit(3)](imagenes/Ejercicio2_parte3.png)   
@@ -395,12 +397,16 @@ usuarios.csv `
 `3.- Al usuario se le obliga a cambiar de contraseña, cuando se loguee.`  
 `4.- Se crea un archivo: usuariosCreados-FechaActual.tmp con el nombre de los usuarios creados y la contraseña asignado, separados por “:”.`  
 `5.- El archivo usuariosCreados-FechaActual.tmp tiene que ser mostrado en pantalla tras la ejecución del script.`  
-
 <br>
+
+
 > [!NOTE]
-> *En este script nuestro mayor problema fue referente a la línea "sudo useradd -m -p", nos daba error constantemente. Tras un tiempo de investigación por foros, páginas oficiales como openssl y consultas a inteligencia artificial, descubrimos que teníamos que añadir una manera para encriptar las contraseñas de esos usuarios que iban a ser creados.*  
+> *En este script nuestro mayor problema fue referente a la línea "sudo useradd -m -p", nos daba error constantemente. Tras un tiempo de investigación por foros, páginas oficiales como openssl y consultas a inteligencia artificial, descubrimos que teníamos que añadir una manera para encriptar las contraseñas de esos usuarios que iban a ser creados.* 
 
 #### *Bloque del script*  
+<details>
+	<sumary>Script 4</sumary>
+</details>
 <br>
 <br>
 <br>
