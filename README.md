@@ -30,12 +30,13 @@
 <br>
 <br>
 <br>
+
 <img src="https://cdn-icons-png.flaticon.com/512/2037/2037149.png" style="width: 25px; height: 25px;"/> Índice 
-1. [Ejercicio 1](comprobar_Apache_final.png)
-2. [Ejercicio 2]
-3. [Ejercicio 3]
-4. [Ejercicio 4]
-5. [Ejercicio 5]
+- [x] 1. [Ejercicio 1](comprobar_Apache_final.png)
+- [x] 2. [Ejercicio 2]
+- [x] 3. [Ejercicio 3]
+- [x] 4. [Ejercicio 4]
+- [x] 5. [Ejercicio 5]
 <br>
 <br>
 <br>
@@ -58,7 +59,7 @@
 <br>
 
 
-![](https://img.shields.io/badge/ejercicio1-yellow?style=for-the-badge)
+![](https://img.shields.io/badge/ejercicio1-blue?style=for-the-badge)
 
 #### *Enunciado*
 `Realiza un script llamado comprobarApache.sh, que compruebe cada minuto si el servicio apache2 está activo (running).`    
@@ -67,9 +68,14 @@
 `2.- Reinicia el servicio apache2`  
 `Para comprobarlo, para el servicio. Ejecuta el script en segundo plano y observa si lo reinicia y crea el archivo.`   
 `3.- Además del script, crea una tarea programada, de forma que ese script se ejecute cada 6 horas, todos los días. Y si el ordenador está apagado, se debe ejecutar la próxima vez que se inicie, transcurrido cinco minutos.`  
+<br>
+<br>
 
-#### *Desarrollo del script*  
-*Trabajando en este script, concretamente en la función "comprobarApache" nos dimos cuenta que a la hora de redireccionar el error a "/root/ApacheError.tmp" nos denegaría el permiso ya que necesitamos ser root. Decidimos añadir la típica función de "comprobarRoot" para hacerle saber al usuario final que debe logearse como root.*
+> [!NOTE]
+> *Trabajando en este script, concretamente en la función "comprobarApache" nos dimos cuenta que a la hora de redireccionar el error a "/root/ApacheError.tmp" nos denegaría el permiso ya que necesitamos ser root. Decidimos añadir la típica función de "comprobarRoot" para hacerle saber al usuario final que debe logearse como root.*.
+<br>
+<br>
+
 
 #### *Bloque del script*
 ```
@@ -134,7 +140,7 @@ fi
 <br>
 
 
-<img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/27a1.png" style="width: 18px; height: 18px;"/>     **Ejercicio 2**
+![](https://img.shields.io/badge/ejercicio2-blue?style=for-the-badge)
 #### *Enunciado*  
 `Realiza un script llamado usuariosBloqueados.sh, que nos muestre un menú:
 1.- Usuarios Bloqueados.
@@ -148,8 +154,15 @@ BloquearUsuario → Nos pregunta el nombre de un usuario y lo bloqueamos.
 DesbloquearUsuario → Nos pregunta el nombre de un usuario y lo desbloqueamos.
 CerrarSesion → Nos pregunta el nombre de un usuario, y si el usuario lleva más de 30 minutos (1800 seg) sin actividad, se le cierra la sesión.`  
 
-#### *Desarrollo del script*  
-*En este script nos encontramos con un muro que nos impidió avanzar. En la función de **Usuarios bloqueados** nos trabamos a la hora de sacar la lista de usuarios con UID entre 1000 y 2000 a la vez que estuviesen bloqueados.*
+
+<br>
+<br>
+
+> [!NOTE]
+> *En este script nos encontramos con un muro que nos impidió avanzar. En la función de **Usuarios bloqueados** nos trabamos a la hora de sacar la lista de usuarios con UID entre 1000 y 2000 a la vez que estuviesen bloqueados.*
+.
+<br>
+<br> 
 
 <br>
 <br>
@@ -158,7 +171,7 @@ CerrarSesion → Nos pregunta el nombre de un usuario, y si el usuario lleva má
 <br>
 
 
-<img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/27a1.png" style="width: 18px; height: 18px;"/>     **Ejercicio 3**
+![](https://img.shields.io/badge/ejercicio3-blue?style=for-the-badge)
 #### *Enunciado*  
 `Realiza un script llamado crearBorrarUsuarios.sh, que nos muestre un menú:
 1.- Crear Usuarios.` 
@@ -186,7 +199,8 @@ usuarios.csv `
 
 `BorrarUsuarios → Borra de forma masiva usuarios almacenados en el fichero /root/usuarios.csv.`
 
-#### *Desarrollo del script*  
+> [!NOTE]
+> *En este script nos encontramos con un muro que nos impidió avanzar. En la función de **Usuarios bloqueados** nos trabamos a la hora de sacar la lista de usuarios con UID entre 1000 y 2000 a la vez que estuviesen bloqueados.* 
 
 
 <br>
@@ -195,7 +209,7 @@ usuarios.csv `
 <br>
 <br>
 
-<img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/27a1.png" style="width: 18px; height: 18px;"/>     **Ejercicio 4**
+![](https://img.shields.io/badge/ejercicio4-blue?style=for-the-badge)
 #### *Enunciado* 
 `Crea en un script llamado crearUsuarios.sh que permita crear usuarios de forma automática.`   
 `Indicaciones:`  
@@ -209,7 +223,8 @@ usuarios.csv `
 `4.- Se crea un archivo: usuariosCreados-FechaActual.tmp con el nombre de los usuarios creados y la contraseña asignado, separados por “:”.`  
 `5.- El archivo usuariosCreados-FechaActual.tmp tiene que ser mostrado en pantalla tras la ejecución del script.`  
 
-#### *Desarrollo del script*  
+> [!NOTE]
+> *En este script nos encontramos con un muro que nos impidió avanzar. En la función de **Usuarios bloqueados** nos trabamos a la hora de sacar la lista de usuarios con UID entre 1000 y 2000 a la vez que estuviesen bloqueados.*  
 
 
 <br>
@@ -219,13 +234,14 @@ usuarios.csv `
 <br>
 
 
-<img src="https://images.emojiterra.com/google/noto-emoji/unicode-15/color/512px/27a1.png" style="width: 18px; height: 18px;"/>     **Ejercicio 5**
+![](https://img.shields.io/badge/ejercicio5-blue?style=for-the-badge)
 #### *Enunciado* 
 `Partimos de que tenemos varios usuarios: usuario1, usuario2, usuario3.`    
 `Al usuario1, se le ha establecido una cuota de disco: 40k y 100K (soft y hard respectivamente).`  
 `Realiza un script llamado cuotasUsuarios.sh, que nos copie la cuota del usuario1 a todos los usuarios cuyo uid >1000 y uid<2000.`
 
-#### *Desarrollo del script*  
+> [!NOTE]
+> *En este script nos encontramos con un muro que nos impidió avanzar. En la función de **Usuarios bloqueados** nos trabamos a la hora de sacar la lista de usuarios con UID entre 1000 y 2000 a la vez que estuviesen bloqueados.*
 
 
 <br>
