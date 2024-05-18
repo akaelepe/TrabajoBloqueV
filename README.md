@@ -33,15 +33,36 @@
 
 <img src="https://cdn-icons-png.flaticon.com/512/2037/2037149.png" style="width: 25px; height: 25px;"/> Índice  
  <br>
-![](https://img.shields.io/badge/ejercicio1-blue?style=for-the-badge)  
- Enunciado  
- Problemas/Soluciones  
- Bloque de script  
- Screenshots  
+ ![](https://img.shields.io/badge/ejercicio1-blue?style=for-the-badge)  
+ > Enunciado.    
+ > Problemas/Soluciones.    
+ > Bloque de script.    
+ > Screenshots.
+
 ![](https://img.shields.io/badge/ejercicio2-red?style=for-the-badge)  
-![](https://img.shields.io/badge/ejercicio3-yellow?style=for-the-badge)  
+ > Enunciado.    
+ > Problemas/Soluciones.    
+ > Bloque de script.    
+ > Screenshots.
+
+![](https://img.shields.io/badge/ejercicio3-yellow?style=for-the-badge)
+ > Enunciado.    
+ > Problemas/Soluciones.    
+ > Bloque de script.    
+ > Screenshots.
+
 ![](https://img.shields.io/badge/ejercicio4-orange?style=for-the-badge)  
+ > Enunciado.    
+ > Problemas/Soluciones.    
+ > Bloque de script.    
+ > Screenshots.
+
 ![](https://img.shields.io/badge/ejercicio5-green?style=for-the-badge)  
+ > Enunciado.    
+ > Problemas/Soluciones.    
+ > Bloque de script.    
+ > Screenshots.
+
 
 
 
