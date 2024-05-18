@@ -369,6 +369,8 @@ usuarios.csv `
 `Además, queremos que esas cuentas queden inactivas el 30 de junio de 2024.`
 
 `BorrarUsuarios → Borra de forma masiva usuarios almacenados en el fichero /root/usuarios.csv.`
+<br>
+<br>
 
 > [!NOTE]
 > *En este script nuestro mayor problema fue referente a la línea "sudo useradd -m -p", nos daba error constantemente. Tras un tiempo de investigación por foros, páginas oficiales como openssl y consultas a inteligencia artificial, descubrimos que teníamos que añadir una manera para encriptar las contraseñas de esos usuarios que iban a ser creados.*
