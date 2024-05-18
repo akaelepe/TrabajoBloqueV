@@ -31,12 +31,20 @@
 <br>
 <br>
 
-<img src="https://cdn-icons-png.flaticon.com/512/2037/2037149.png" style="width: 25px; height: 25px;"/> Índice 
-- [x] 1. [Ejercicio 1](comprobar_Apache_final.png)
-- [x] 2. [Ejercicio 2]
-- [x] 3. [Ejercicio 3]
-- [x] 4. [Ejercicio 4]
-- [x] 5. [Ejercicio 5]
+<img src="https://cdn-icons-png.flaticon.com/512/2037/2037149.png" style="width: 25px; height: 25px;"/> Índice  
+ <br>
+![](https://img.shields.io/badge/ejercicio1-blue?style=for-the-badge)  
+ Enunciado  
+ Problemas/Soluciones  
+ Bloque de script  
+ Screenshots  
+![](https://img.shields.io/badge/ejercicio2-red?style=for-the-badge)  
+![](https://img.shields.io/badge/ejercicio3-yellow?style=for-the-badge)  
+![](https://img.shields.io/badge/ejercicio4-orange?style=for-the-badge)  
+![](https://img.shields.io/badge/ejercicio5-green?style=for-the-badge)  
+
+
+
 <br>
 <br>
 <br>
@@ -131,9 +139,9 @@ fi
 
 ```
 #### *Screenshots*
-[Pantallazo que muestra el script en gedit](comprobar_Apache_final.png)  
-[Pantallazo del crontab con la tarea programada del script](crontab_comprobarApache.png)  
-[Pantallazo del "comprobarApache.sh" funcionando](ej1_funcionando.png)  
+[Pantallazo que muestra el script en gedit](imagenes/comprobar_Apache_final.png)  
+[Pantallazo del crontab con la tarea programada del script](imagenes/crontab_comprobarApache.png)  
+[Pantallazo del "comprobarApache.sh" funcionando](imagenes/ej1_funcionando.png)  
 
 <br>
 <br>
@@ -142,7 +150,7 @@ fi
 <br>
 
 
-![](https://img.shields.io/badge/ejercicio2-blue?style=for-the-badge)
+![](https://img.shields.io/badge/ejercicio2-red?style=for-the-badge)
 #### *Enunciado*  
 `Realiza un script llamado usuariosBloqueados.sh, que nos muestre un menú:
 1.- Usuarios Bloqueados.
@@ -173,7 +181,7 @@ CerrarSesion → Nos pregunta el nombre de un usuario, y si el usuario lleva má
 <br>
 
 
-![](https://img.shields.io/badge/ejercicio3-blue?style=for-the-badge)
+![](https://img.shields.io/badge/ejercicio3-yellow?style=for-the-badge)
 #### *Enunciado*  
 `Realiza un script llamado crearBorrarUsuarios.sh, que nos muestre un menú:
 1.- Crear Usuarios.` 
@@ -211,7 +219,7 @@ usuarios.csv `
 <br>
 <br>
 
-![](https://img.shields.io/badge/ejercicio4-blue?style=for-the-badge)
+![](https://img.shields.io/badge/ejercicio4-orange?style=for-the-badge)
 #### *Enunciado* 
 `Crea en un script llamado crearUsuarios.sh que permita crear usuarios de forma automática.`   
 `Indicaciones:`  
@@ -236,7 +244,7 @@ usuarios.csv `
 <br>
 
 
-![](https://img.shields.io/badge/ejercicio5-blue?style=for-the-badge)
+![](https://img.shields.io/badge/ejercicio5-green?style=for-the-badge)
 #### *Enunciado* 
 `Partimos de que tenemos varios usuarios: usuario1, usuario2, usuario3.`    
 `Al usuario1, se le ha establecido una cuota de disco: 40k y 100K (soft y hard respectivamente).`  
