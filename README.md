@@ -159,7 +159,7 @@ CerrarSesion → Nos pregunta el nombre de un usuario, y si el usuario lleva má
 <br>
 
 > [!NOTE]
-> *En este script nos encontramos con un muro que nos impidió avanzar. En la función de **Usuarios bloqueados** nos trabamos a la hora de sacar la lista de usuarios con UID entre 1000 y 2000 a la vez que estuviesen bloqueados.*
+> *En este script estuvimos bastante atascados en la función "UsuariosBloqueados", ya que no se nos ocurría la forma en la que podiamos obtener los usuarios con UID entre 1000 y 2000 a la vez que la condición de que estuviesen bloqueados. Al final recurrimos a redirigir los usuarios con UID entre 1000 y 2000 a un archivo, posteriormente hemos utilizado un "passwd -S -a" para comprobar el estado de las contraseñas de todos los usuarios del sistema *
 .
 <br>
 <br> 
