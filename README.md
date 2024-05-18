@@ -193,8 +193,130 @@ CerrarSesion → Nos pregunta el nombre de un usuario, y si el usuario lleva má
 > *En este script estuvimos bastante atascados en la función "UsuariosBloqueados", ya que no se nos ocurría la forma en la que podiamos obtener los usuarios con UID entre 1000 y 2000 a la vez que la condición de que estuviesen bloqueados. Al final recurrimos a redirigir los usuarios con UID entre 1000 y 2000 a un archivo, posteriormente hemos utilizado un "passwd -S -a" para comprobar el estado de las contraseñas de todos los usuarios del sistema *
 .
 <br>
-<br> 
+<br>
+  
+#### *Bloque del script*  
+```  
+#!/bin/bash
+#Autor: Jose María Jaén, Alejandro Lamprea, Javier Barrero
+#Versión: 1.0
+#Fecha:13/05/24
+#Descripción: Este script lanza un menú con el que puedes 1)consultar usuarios bloqueados 2)bloquear un usuario 3)desbloquear un usuario 4)cerrar sesión usuario 5)salir.
+#Parámetros/Variables
+usuarios="/home/javi/TRABAJOSCRIPTS/usuarios.txt"
+usuariosBloqueados="/home/javi/TRABAJOSCRIPTS/bloqueados.txt"
 
+
+
+#Funciones
+menu ()
+{
+	echo ""
+	echo "Servidor de usuarios:"
+	echo "_____________________________________________"
+	echo "1.- Usuarios Bloqueados."
+	echo "2.- Bloquear un usuario."
+	echo "3.- Desbloquear usuario."
+	echo "4.- Cerrar sesión usuario."
+	echo "5.- Salir."
+	read -p "Pulse un número: " opcion
+
+case $opcion in
+1)
+	UsuariosBloqueados
+	;;
+2)
+	BloquearUsuario
+	;;
+3)
+	DesbloquearUsuario
+	;;
+4)
+	CerrarSesion
+	;;
+
+5)
+	exit
+	;;
+*)
+	clear
+	echo "Has introducido un número incorrecto"
+	;;
+esac
+}
+
+#Esta función comprueba si el usuario está en modo root.
+comprobarRoot ()
+{
+if [ `id -u` != 0 ]
+then 
+	echo "No estás como administrador"
+	exit
+fi
+}
+
+# Esta función nos indican los usuarios que están bloqueados cuyo identificador oscila entre 1000 y 2000 en nuestro sistema. Estos usuarios serán redirigidos a un archivo llamado usuarios.txt.
+# Después identificaremos el estado de las contraseñas de todos los usuarios del sistema e intentaremos buscar como coincidencia la letra L para identificar a los usuarios bloqueados. Todo esto será redirigido a un archivo llamado bloqueados.txt
+# Por último uniremos ambos archivos para buscar las coincidencias de los usuarios que están bloqueados y lo sacaremos por pantalla.
+UsuariosBloqueados() 
+{
+ echo "Usuarios bloqueados: "
+ awk -F: '$3 >= 1000 && $3 < 2000 {print $1}' /etc/passwd > $usuarios
+ sudo passwd -S -a | grep "L" | cut -d " " -f1 > $usuariosBloqueados
+ union=$(grep -f $usuarios $usuariosBloqueados)
+ echo $union
+ echo "_____________________________________________"
+}
+
+# Esta función nos bloquaría el usuario que deseemos.
+BloquearUsuario()
+{
+    read -p "Ingrese el nombre de usuario que desea bloquear: " usuario
+    `sudo usermod -L $usuario`
+    echo "_____________________________________________"
+}
+
+# Esta función nos desbloquaría el usuario que deseemos.
+DesbloquearUsuario() 
+{
+    read -p "Ingrese el nombre de usuario que desea desbloquear: " usuario
+    `sudo usermod -U $usuario`
+    echo "_____________________________________________"
+}
+
+# Esta función nos indicaría si un usuario está inactivo.
+# Primero introduciríamos el nombre del usuario que al que queramos comprobar su actividad. 
+# Luego comprobariamos si ese usuario está conectado y si está conectado nos dará el tiempo de inactividad. Si ese tiempo de inactividad es mayor a 1800 segundos se le cerraría la sesión de manera automática.
+# Si ese usuario no está inactivo en ese rango de tiempo saldrá por pantalla que el usuario tiene la sesión activa.
+CerrarSesion() 
+{
+    read -p "Ingrese el nombre de usuario para cerrar sesión si está inactivo: " usuario
+    if who | grep -q $usuario
+     then
+        tiempoInactividad=$(who -u | grep $usuario | awk '{print $5}')
+        if [ $tiempoInactividad -gt 1800 ]
+        	then
+            		`sudo pkill -KILL -u $usuario`
+            echo "La sesión del usuario $usuario ha sido cerrada por inactividad."
+        else
+            echo "El usuario $usuario tiene la sesión activa."
+        fi
+    else
+        echo "El usuario $usuario no tiene sesión activa."
+    fi
+    echo "_____________________________________________"
+}
+
+
+#Bloque principal
+clear
+while true
+do
+	menu
+done  
+```  
+
+    
 <br>
 <br>
 <br>
@@ -233,7 +355,7 @@ usuarios.csv `
 > [!NOTE]
 > *En este script nos encontramos con un muro que nos impidió avanzar. En la función de **Usuarios bloqueados** nos trabamos a la hora de sacar la lista de usuarios con UID entre 1000 y 2000 a la vez que estuviesen bloqueados.* 
 
-
+#### *Bloque del script*  
 <br>
 <br>
 <br>
@@ -257,7 +379,7 @@ usuarios.csv `
 > [!NOTE]
 > *En este script nos encontramos con un muro que nos impidió avanzar. En la función de **Usuarios bloqueados** nos trabamos a la hora de sacar la lista de usuarios con UID entre 1000 y 2000 a la vez que estuviesen bloqueados.*  
 
-
+#### *Bloque del script*  
 <br>
 <br>
 <br>
@@ -274,7 +396,7 @@ usuarios.csv `
 > [!NOTE]
 > *En este script nos encontramos con un muro que nos impidió avanzar. En la función de **Usuarios bloqueados** nos trabamos a la hora de sacar la lista de usuarios con UID entre 1000 y 2000 a la vez que estuviesen bloqueados.*
 
-
+#### *Bloque del script*  
 <br>
 <br>
 <br>
