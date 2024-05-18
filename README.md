@@ -155,12 +155,7 @@ done
 comprobarRoot
 
 ComprobarApache &
-#Esta condición realiza la ejecución del script a los 5 minutos de estar encendido el equipo.
-if [ "$(systemctl is-system-running)" == "poweroff" ];
-    then
-   	 sleep 300
-   	 /home/javi/TRABAJOSCRIPTS/comprobarApache.sh
-fi
+
 ```
 </details>
 
