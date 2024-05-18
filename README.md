@@ -445,13 +445,15 @@ cat "usuariosCreados-$fecha.tmp"
 
 
 </details>
+<br>
+<br>
 
 #### *Screenshots*  
   
 [Pantallazo que muestra el script en gedit](imagenes/crearUsuarios.png)  
-[Pantallazo que muestra el script en gedit(2)](imagenes/Ejercicio2_parte2.png)  
-[Pantallazo que muestra el script en gedit(3)](imagenes/Ejercicio2_parte3.png)   
-[Pantallazo del "usuariosBloqueados.sh" funcionando](imagenes/Ejercicio2_corriendo.png)  
+[Pantallazo que muestra la ejecución del script (parte1)](imagenes/iniciar_script_al_encender_1.png)  
+[Pantallazo que muestra la ejecución del script (parte2)](imagenes/iniciar_script_al_encender_2.png)   
+[Pantallazo que muestra la ejecución del script (parte3)](imagenes/iniciar_script_al_encender_3.png)  
 
 <br>
 <br>
