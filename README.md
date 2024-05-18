@@ -449,7 +449,7 @@ cat "usuariosCreados-$fecha.tmp"
 <br>
 
 #### *Screenshots*  
-  
+
 [Pantallazo que muestra el script en gedit](imagenes/crearUsuarios.png)  
 [Pantallazo que muestra la ejecución del script (parte1)](imagenes/ejecucion_crearUsuario_1.png)  
 [Pantallazo que muestra la ejecución del script (parte2)](imagenes/ejecucion_crearUsuario_2.png)   
