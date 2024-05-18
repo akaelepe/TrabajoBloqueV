@@ -109,7 +109,10 @@ __________.__                                    .___
 <br>
 
 
-#### *Bloque del script*
+#### *Bloque del script*  
+<details>
+	<sumary>Script 1</sumary>
+
 ```
 #!/bin/bash
 #Autor: Jose Maria Jaén, Alejandro Lamprea, Javier Barrero
@@ -125,7 +128,7 @@ fecha=$(date +%d-%m-%Y-%H-%M)
 #Esta función comprueba si el usuario está en modo root.
 comprobarRoot ()
 {
-if [ `id -u` != 0 ]
+if [ id -u != 0 ]
 then
     echo "No estás como administrador"
     exit
@@ -158,8 +161,12 @@ if [ "$(systemctl is-system-running)" == "poweroff" ];
    	 sleep 300
    	 /home/javi/TRABAJOSCRIPTS/comprobarApache.sh
 fi
-
 ```
+</details>
+
+<br>
+<br>
+
 #### *Screenshots*
 [Pantallazo que muestra el script en gedit](imagenes/comprobar_Apache_final.png)  
 [Pantallazo del crontab con la tarea programada del script](imagenes/crontab_comprobarApache.png)  
@@ -192,12 +199,15 @@ fi
 <br>
 
 > [!NOTE]
-> *En este script estuvimos bastante atascados en la función "UsuariosBloqueados", ya que no se nos ocurría la forma en la que podiamos obtener los usuarios con UID entre 1000 y 2000 a la vez que la condición de que estuviesen bloqueados. Al final recurrimos a redirigir los usuarios con UID entre 1000 y 2000 a un archivo, posteriormente hemos utilizado un "passwd -S -a" para comprobar el estado de las contraseñas de todos los usuarios del sistema *
-.
+> *En este script estuvimos bastante atascados en la función "UsuariosBloqueados", ya que no se nos ocurría la forma en la que podiamos obtener los usuarios con UID entre 1000 y 2000 a la vez que la condición de que estuviesen bloqueados. Al final recurrimos a redirigir los usuarios con UID entre 1000 y 2000 a un archivo, posteriormente hemos utilizado un "passwd -S -a" para comprobar el estado de las contraseñas de todos los usuarios del sistema.*
+
 <br>
 <br>
   
 #### *Bloque del script*  
+<details>
+	<sumary>Script 2</sumary>
+
 ```  
 #!/bin/bash
 #Autor: Jose María Jaén, Alejandro Lamprea, Javier Barrero
@@ -316,7 +326,10 @@ while true
 do
 	menu
 done  
-```  
+```
+</details>  
+<br>
+<br>
 #### *Screenshots*
 [Pantallazo que muestra el script en gedit(1)](imagenes/Ejercicio2_parte1.png)  
 [Pantallazo que muestra el script en gedit(2)](imagenes/Ejercicio2_parte2.png)  
@@ -359,7 +372,8 @@ usuarios.csv `
 `BorrarUsuarios → Borra de forma masiva usuarios almacenados en el fichero /root/usuarios.csv.`
 
 > [!NOTE]
-> *En este script nos encontramos con un muro que nos impidió avanzar. En la función de **Usuarios bloqueados** nos trabamos a la hora de sacar la lista de usuarios con UID entre 1000 y 2000 a la vez que estuviesen bloqueados.* 
+> *En este script nuestro mayor problema fue referente a la línea "sudo useradd -m -p", nos daba error constantemente. Tras un tiempo de investigación por foros, páginas oficiales como openssl y consultas a inteligencia artificial, descubrimos que teníamos que añadir una manera para encriptar las contraseñas de esos usuarios que iban a ser creados.*
+ 
 
 #### *Bloque del script*  
 <br>
@@ -382,8 +396,9 @@ usuarios.csv `
 `4.- Se crea un archivo: usuariosCreados-FechaActual.tmp con el nombre de los usuarios creados y la contraseña asignado, separados por “:”.`  
 `5.- El archivo usuariosCreados-FechaActual.tmp tiene que ser mostrado en pantalla tras la ejecución del script.`  
 
+<br>
 > [!NOTE]
-> *En este script nos encontramos con un muro que nos impidió avanzar. En la función de **Usuarios bloqueados** nos trabamos a la hora de sacar la lista de usuarios con UID entre 1000 y 2000 a la vez que estuviesen bloqueados.*  
+> *En este script nuestro mayor problema fue referente a la línea "sudo useradd -m -p", nos daba error constantemente. Tras un tiempo de investigación por foros, páginas oficiales como openssl y consultas a inteligencia artificial, descubrimos que teníamos que añadir una manera para encriptar las contraseñas de esos usuarios que iban a ser creados.*  
 
 #### *Bloque del script*  
 <br>
@@ -408,3 +423,8 @@ usuarios.csv `
 <br>
 <br>
 <br>
+
+
+
+#### *Bibliografía*  
+Ejercicio 3- Recurrimos a la fuente openssl, ya que tuvimos que recurrir a la encriptación de contraseñas para que el script funcionase sin errores. https://www.openssl.org/docs/man3.0/man1/openssl-passwd.html 
