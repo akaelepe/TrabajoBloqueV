@@ -1,5 +1,6 @@
 ![MasterHead](https://user-images.githubusercontent.com/74038190/213910845-af37a709-8995-40d6-be59-724526e3c3d7.gif)
 
+
 ![](https://img.shields.io/badge/scripts-orange?style=for-the-badge)           
 ![](https://img.shields.io/badge/github-blue?style=for-the-badge)
 
@@ -173,17 +174,18 @@ fi
 
 ![](https://img.shields.io/badge/ejercicio2-red?style=for-the-badge)
 #### *Enunciado*  
-`Realiza un script llamado usuariosBloqueados.sh, que nos muestre un menú:
-1.- Usuarios Bloqueados.
-2.- Bloquear un usuario.
-3.- Desbloquear usuario.
-4.- Cerrar sesión usuario
-5.- Salir
-Cada opción del menú corresponde con una función.
-UsuariosBloqueados → nos muestra en pantalla los usuarios (uid>1000 y <2000) que tengan la cuenta bloqueada.
-BloquearUsuario → Nos pregunta el nombre de un usuario y lo bloqueamos.
-DesbloquearUsuario → Nos pregunta el nombre de un usuario y lo desbloqueamos.
-CerrarSesion → Nos pregunta el nombre de un usuario, y si el usuario lleva más de 30 minutos (1800 seg) sin actividad, se le cierra la sesión.`  
+`Realiza un script llamado usuariosBloqueados.sh, que nos muestre un menú:`  
+`1.- Usuarios Bloqueados`      
+`2.- Bloquear un usuario`     
+`3.- Desbloquear usuario`  
+`4.- Cerrar sesión usuario`  
+`5.- Salir`  
+`Cada opción del menú corresponde con una función.`  
+`UsuariosBloqueados → nos muestra en pantalla los usuarios (uid>1000 y <2000) que tengan la cuenta bloqueada.`  
+`BloquearUsuario → Nos pregunta el nombre de un usuario y lo bloqueamos.`  
+`DesbloquearUsuario → Nos pregunta el nombre de un usuario y lo desbloqueamos.`  
+`CerrarSesion → Nos pregunta el nombre de un usuario, y si el usuario lleva más de 30 minutos (1800 seg) sin actividad, se le cierra la sesión.`
+  
 
 
 <br>
