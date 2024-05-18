@@ -165,8 +165,8 @@ ComprobarApache &
 #### *Screenshots*
 [Pantallazo que muestra el script en gedit](imagenes/ComprobarApache_final.png)  
 [Pantallazo del crontab con la tarea programada del script](imagenes/crontab_comprobarApache.png)  
-[Pantallazo de como hacer que el script se inicie al arrancar el sistema 1](iniciar_script_al_encender_1.png)
-[Pantallazo de como hacer que el script se inicie al arrancar el sistema 2](iniciar_script_al_encender_2.png)
+[Pantallazo de como hacer que el script se inicie al arrancar el sistema 1](imagenes/iniciar_script_al_encender_1.png)  
+[Pantallazo de como hacer que el script se inicie al arrancar el sistema 2](imagenes/iniciar_script_al_encender_2.png)  
 [Pantallazo del "comprobarApache.sh" funcionando](imagenes/ej1_funcionando.png)  
 
 <br>
