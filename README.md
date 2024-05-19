@@ -377,6 +377,103 @@ usuarios.csv `
  
 
 #### *Bloque del script*  
+<details>
+	<sumary>Script 3</sumary>
+
+```#!/bin/bash
+#Autor: Jose María Jaén, Alejandro Lamprea, Javier Barrero
+#Versión: 1.0
+#Fecha:17-05-24
+#Descripción: Este script permite crear usuarios d emanera masiva y también permite borrarlos de la misma manera.
+#Parámetros/Variables
+
+
+#Funciones
+#Esta función nos realizaría un menú repetitivo el cual dejaria de repetirse hasta que el usuario pulse el número 3.
+menu ()
+{
+	while true;
+	do
+		echo " "
+		echo "Menú: "
+		echo "___________________________________"
+		echo "1.- Crear Usuarios"
+		echo "2.- Borrar Usuarios"
+		echo "3.- Salir"
+		read -p "Pulse un número: " numero
+	
+		case $numero in
+		1)
+		crearUsuarios
+		;;
+		2)
+		borrarUsuarios
+		;;
+		3)
+		clear
+		;;
+		*)
+		echo "Has pulsado una tecla erronea"
+		;;
+		esac
+	done
+		}
+
+#Esta función nos permitiría crear masivamente los usuarios que existan dentro del archivo usuarios.csv que se encuentra en el root. Si ya estaban creados en nuestro sistema saldrá por pantalla que ya han sido creados y si no lo estaban nos saldrá que se han creado. Cuando termine el bucle se enviará el contenido de la variable email al archivo email.txt que se encuentra en el direfctorio de trabajo de el usuario al que pertenece dicho email.
+crearUsuarios ()
+{
+	while read linea
+	do
+		id_usuario=$(echo $linea | cut -d: -f1)
+		contrasena=$(echo $linea | cut -d: -f2)
+		nombre=$(echo $linea | cut -d: -f3)
+		apellidos=$(echo $linea | cut -d: -f4)
+		email=$(echo $linea | cut -d: -f5)
+	
+			sudo useradd -m -s /bin/bash -p $contrasena -c "$nombre $apellidos" -e "2026-10-01" $id_usuario > /dev/null 2>&1
+			if [ $? -eq 0 ]
+				then
+					echo "El usuario: $id_usuario ha sido creado."
+				else
+					echo "El usuario: $id_usuario ya está creado."
+			fi
+					echo "$email" > /home/$id_usuario/email.txt
+		
+	done </root/usuarios.csv
+}
+
+#Esta función nos permitiría borrar masivamente los usuarios que coincidan con la variable id_usurio que provenga del archivo usuarios.csv que se encuentra en el root.
+borrarUsuarios ()
+{
+	while read linea
+		do
+			id_usuario=$(echo $linea | cut -d: -f1)
+			sudo userdel -r $id_usuario > /dev/null 2>&1
+			if [ $? -eq 0 ]
+				then
+					echo "El usuario: $id_usuario ha sido eliminado "
+				else
+					echo "El usuario: $id_usuario ha sido imposible de eliminar"
+			fi
+		done</root/usuarios.csv
+}	
+#Bloque principal
+clear
+menu 
+```
+</details>
+#### *Screenshots*  
+
+[Pantallazo que muestra el script en gedit](imagenes/crearUsuarios.png)  
+[Pantallazo que muestra la ejecución del script (parte1)](imagenes/ejecucion_crearUsuario_1.png)  
+[Pantallazo que muestra la ejecución del script (parte2)](imagenes/ejecucion_crearUsuario_2.png)   
+[Pantallazo que muestra la ejecución del script (parte3)](imagenes/ejecucion_crearUsuario_3.png)  
+
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
