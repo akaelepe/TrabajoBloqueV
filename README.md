@@ -202,8 +202,8 @@ ComprobarApache &
 #!/bin/bash
 #Autor: Jose María Jaén, Alejandro Lamprea, Javier Barrero
 #Versión: 1.0
-#Fecha:13/05/24
-#Descripción: Este script lanza un menú con el que puedes 1)consultar usuarios bloqueados 2)bloquear un usuario 3)desbloquear un usuario 4)cerrar sesión usuario 5)salir.
+#Fecha:
+#Descripción: Este script realiza ……….
 #Parámetros/Variables
 usuarios="/home/javi/TRABAJOSCRIPTS/usuarios.txt"
 usuariosBloqueados="/home/javi/TRABAJOSCRIPTS/bloqueados.txt"
@@ -213,37 +213,37 @@ usuariosBloqueados="/home/javi/TRABAJOSCRIPTS/bloqueados.txt"
 #Funciones
 menu ()
 {
-	echo ""
-	echo "Servidor de usuarios:"
-	echo "_____________________________________________"
-	echo "1.- Usuarios Bloqueados."
-	echo "2.- Bloquear un usuario."
-	echo "3.- Desbloquear usuario."
-	echo "4.- Cerrar sesión usuario."
-	echo "5.- Salir."
-	read -p "Pulse un número: " opcion
+    echo ""
+    echo "Servidor de usuarios:"
+    echo "_____________________________________________"
+    echo "1.- Usuarios Bloqueados."
+    echo "2.- Bloquear un usuario."
+    echo "3.- Desbloquear usuario."
+    echo "4.- Cerrar sesión usuario."
+    echo "5.- Salir."
+    read -p "Pulse un número: " opcion
 
 case $opcion in
 1)
-	UsuariosBloqueados
-	;;
+    UsuariosBloqueados
+    ;;
 2)
-	BloquearUsuario
-	;;
+    BloquearUsuario
+    ;;
 3)
-	DesbloquearUsuario
-	;;
+    DesbloquearUsuario
+    ;;
 4)
-	CerrarSesion
-	;;
+    CerrarSesion
+    ;;
 
 5)
-	exit
-	;;
+    exit
+    ;;
 *)
-	clear
-	echo "Has introducido un número incorrecto"
-	;;
+    clear
+    echo "Has introducido un número incorrecto"
+    ;;
 esac
 }
 
@@ -251,16 +251,16 @@ esac
 comprobarRoot ()
 {
 if [ `id -u` != 0 ]
-then 
-	echo "No estás como administrador"
-	exit
+then
+    echo "No estás como administrador"
+    exit
 fi
 }
 
 # Esta función nos indican los usuarios que están bloqueados cuyo identificador oscila entre 1000 y 2000 en nuestro sistema. Estos usuarios serán redirigidos a un archivo llamado usuarios.txt.
 # Después identificaremos el estado de las contraseñas de todos los usuarios del sistema e intentaremos buscar como coincidencia la letra L para identificar a los usuarios bloqueados. Todo esto será redirigido a un archivo llamado bloqueados.txt
 # Por último uniremos ambos archivos para buscar las coincidencias de los usuarios que están bloqueados y lo sacaremos por pantalla.
-UsuariosBloqueados() 
+UsuariosBloqueados()
 {
  echo "Usuarios bloqueados: "
  awk -F: '$3 >= 1000 && $3 < 2000 {print $1}' /etc/passwd > $usuarios
@@ -273,40 +273,40 @@ UsuariosBloqueados()
 # Esta función nos bloquaría el usuario que deseemos.
 BloquearUsuario()
 {
-    read -p "Ingrese el nombre de usuario que desea bloquear: " usuario
-    `sudo usermod -L $usuario`
-    echo "_____________________________________________"
+	read -p "Ingrese el nombre de usuario que desea bloquear: " usuario
+	`sudo usermod -L $usuario`
+	echo "_____________________________________________"
 }
 
 # Esta función nos desbloquaría el usuario que deseemos.
-DesbloquearUsuario() 
+DesbloquearUsuario()
 {
-    read -p "Ingrese el nombre de usuario que desea desbloquear: " usuario
-    `sudo usermod -U $usuario`
-    echo "_____________________________________________"
+	read -p "Ingrese el nombre de usuario que desea desbloquear: " usuario
+	`sudo usermod -U $usuario`
+	echo "_____________________________________________"
 }
 
 # Esta función nos indicaría si un usuario está inactivo.
-# Primero introduciríamos el nombre del usuario que al que queramos comprobar su actividad. 
+# Primero introduciríamos el nombre del usuario que al que queramos comprobar su actividad.
 # Luego comprobariamos si ese usuario está conectado y si está conectado nos dará el tiempo de inactividad. Si ese tiempo de inactividad es mayor a 1800 segundos se le cerraría la sesión de manera automática.
 # Si ese usuario no está inactivo en ese rango de tiempo saldrá por pantalla que el usuario tiene la sesión activa.
-CerrarSesion() 
+CerrarSesion()
 {
-    read -p "Ingrese el nombre de usuario para cerrar sesión si está inactivo: " usuario
-    if who | grep -q $usuario
-     then
-        tiempoInactividad=$(who -u | grep $usuario | awk '{print $5}')
-        if [ $tiempoInactividad -gt 1800 ]
-        	then
-            		`sudo pkill -KILL -u $usuario`
-            echo "La sesión del usuario $usuario ha sido cerrada por inactividad."
-        else
-            echo "El usuario $usuario tiene la sesión activa."
-        fi
-    else
-        echo "El usuario $usuario no tiene sesión activa."
-    fi
-    echo "_____________________________________________"
+	read -p "Ingrese el nombre de usuario para cerrar sesión si está inactivo: " usuario
+	if who | grep -q $usuario
+ 	then
+    	tiempoInactividad=$(who -u | grep $usuario | awk '{print $5}')
+    	if [ $tiempoInactividad > 1800 ] > /dev/null 2>&1
+   		 then
+       			 `sudo pkill -KILL -u $usuario`
+        	echo "La sesión del usuario $usuario ha sido cerrada por inactividad."
+    	else
+        	echo "El usuario $usuario tiene la sesión activa. $tiempoInactividad"
+    	fi
+	else
+    	echo "El usuario $usuario no tiene sesión activa."
+	fi
+	echo "_____________________________________________"
 }
 
 
@@ -314,8 +314,9 @@ CerrarSesion()
 clear
 while true
 do
-	menu
-done  
+    menu
+done
+
 ```
 </details>  
 
