@@ -461,13 +461,13 @@ borrarUsuarios ()
 clear
 menu 
 ```
-</details>
+</details>  
+
 #### *Screenshots*  
 
-[Pantallazo que muestra el script en gedit](imagenes/crearUsuarios.png)  
-[Pantallazo que muestra la ejecución del script (parte1)](imagenes/ejecucion_crearUsuario_1.png)  
-[Pantallazo que muestra la ejecución del script (parte2)](imagenes/ejecucion_crearUsuario_2.png)   
-[Pantallazo que muestra la ejecución del script (parte3)](imagenes/ejecucion_crearUsuario_3.png)  
+[Pantallazo que muestra el script en gedit(parte1)](imagenes/gedit_crearBorrarUsuarios_1.png)  
+[Pantallazo que muestra el script en gedit(parte1))](imagenes/gedit_crearBorrarUsuarios_2.png)   
+[Pantallazo que muestra la ejecución del script](imagenes/ejecucion_crearBorrarUsuarios.png)  
 
 <br>
 <br>
