@@ -424,7 +424,7 @@ crearUsuarios ()
 		apellidos=$(echo $linea | cut -d: -f4)
 		email=$(echo $linea | cut -d: -f5)
 	
-			sudo useradd -m -s /bin/bash -p $contrasena -c "$nombre $apellidos" -e "2026-10-01" $id_usuario > /dev/null 2>&1
+			sudo useradd -m -s /bin/bash -p $contrasena -c "$nombre $apellidos" -e "2024-06-30" $id_usuario > /dev/null 2>&1
 			if [ $? -eq 0 ]
 				then
 					echo "El usuario: $id_usuario ha sido creado."
