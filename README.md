@@ -467,7 +467,7 @@ menu
 
 [Pantallazo que muestra el script en gedit(parte1)](imagenes/gedit_crearBorrarUsuarios_1.png)  
 [Pantallazo que muestra el script en gedit(parte1))](imagenes/gedit_crearBorrarUsuarios_2.png)   
-[Pantallazo que muestra la ejecución del script](imagenes/ejecucion_crearBorrarUsuarios.png)  
+[Pantallazo que muestra la ejecución del script](imagenes/ejecución_crearBorrarUsuarios.png)  
 
 <br>
 <br>
