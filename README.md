@@ -17,7 +17,7 @@ En este proyecto trabajaremos detectando problemas de rendimiento monitorizando 
 
 
 
-<h5 align="right"> Trabajo realizado por Javier Barrero, Jose María Jaén y Alejandro Lamprea. </h5>
+<h5 align="right"> Trabajo realizado por Javier Barrero,  Alejandro Lamprea y Jose María Jaén. </h5>
 <br>
 <br>
 <br>
@@ -571,4 +571,24 @@ cat "usuariosCreados-$fecha.tmp"
 
 
 #### *Bibliografía*  
-Ejercicio 3- Recurrimos a la fuente openssl, ya que tuvimos que recurrir a la encriptación de contraseñas para que el script funcionase sin errores. https://www.openssl.org/docs/man3.0/man1/openssl-passwd.html 
+| Ejercicio | Fuentes |
+| --------- | ------ |
+| 1 | https://computernewage.com/2019/03/09/scripting-linux-bash-ejecutar-script-arranque/ https://geekland.eu/programar-la-ejecucion-de-tareas-con-systemd-timers-y-reemplazar-cron/ |
+| 2 | https://www.ionos.es/digitalguide/servidores/configuracion/comando-de-linux-passwd/ |
+| 3 | https://www.openssl.org/docs/man3.0/man1/openssl-passwd.html |
+| 4 | https://infolinux.es/comando-useradd-de-linux-creacion-de-usuarios-de-manera-tecnica/ |
+| 5 |   |
+<br>
+
+> [!NOTE]
+> Para algunos ejercicios  acudimos a apuntes de temas pasados y también alguna consulta a la inteligencia artificial.
+
+
+
+
+
+
+
+
+
+
