@@ -593,6 +593,7 @@ Los objetivos para la realización de este trabajo de scripts basados en bash cr
 #### *Conclusiones personales*
 > He aprendido mucho acerca de bash y su gestión combinando los conocimientos adquiridos en clase con la realizacion del trabajo en grupo con mis compañeros.  -Javier Barrero Vázquez.
 <br>
+
 > En mi caso he descubierto dos herramientas que desconocía como son GitHub (en profundidad) y el lenguaje Markdown y, más allá de este trabajo, he investigado posibles utilidades de cara al futuro y me han sorprendido bastantes.  -Alejandro Lamprea Pérez.
 
 
