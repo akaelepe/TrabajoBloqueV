@@ -595,7 +595,8 @@ Los objetivos para la realización de este trabajo de scripts basados en bash cr
 <br>
 
 > En mi caso he descubierto dos herramientas que desconocía como son GitHub (en profundidad) y el lenguaje Markdown y, más allá de este trabajo, he investigado posibles utilidades de cara al futuro y me han sorprendido bastantes.  -Alejandro Lamprea Pérez.
-
+<br>
+> Yo he aprendido a gestionarme el tiempo además de coordinarme con mi grupo para la división de tareas. Respecto a lo que viene siendo los scripts, me han servido a modo de repaso de cara al final de trimestre y al segundo año.  -Jose María Jaén Castillo.
 
 
 
