@@ -1,6 +1,6 @@
 ![MasterHead](https://user-images.githubusercontent.com/74038190/213910845-af37a709-8995-40d6-be59-724526e3c3d7.gif)
 
-
+# **Trabajo bloque 5**
 ![](https://img.shields.io/badge/scripts-orange?style=for-the-badge)           
 ![](https://img.shields.io/badge/github-blue?style=for-the-badge)
 
@@ -373,7 +373,7 @@ usuarios.csv `
 <br>
 
 > [!NOTE]
-> *En este script nuestro mayor problema fue referente a la línea "sudo useradd -m -p", nos daba error constantemente. Tras un tiempo de investigación por foros, páginas oficiales como openssl y consultas a inteligencia artificial, descubrimos que teníamos que añadir una manera para encriptar las contraseñas de esos usuarios que iban a ser creados.*
+> *En este script el único inconveniente que tuvimos fue tener que revisar temas anteriores para repasar comandos y propiedades que estaban un poco oxidados. Por ejemplo: useradd -m, -s, -p, -c y -e.*
  
 
 #### *Bloque del script*  
