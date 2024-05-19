@@ -591,8 +591,7 @@ Los objetivos para la realización de este trabajo de scripts basados en bash cr
 
 
 #### *Conclusiones personales*
-> He aprendido mucho acerca de bash y su gestión combinando los conocimientos adquiridos en clase con la realizacion del trabajo en grupo con mis compañeros.
-- Javier Barrero Vázquez.
+> He aprendido mucho acerca de bash y su gestión combinando los conocimientos adquiridos en clase con la realizacion del trabajo en grupo con mis compañeros.  -Javier Barrero Vázquez.
 
 
 
