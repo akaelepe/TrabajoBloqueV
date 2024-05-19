@@ -104,7 +104,7 @@ __________.__                                    .___
 <br>
 
 > [!NOTE]
-> *Trabajando en este script, concretamente en la función "comprobarApache" nos dimos cuenta que a la hora de redireccionar el error a "/root/ApacheError.tmp" nos denegaría el permiso ya que necesitamos ser root. Decidimos añadir la típica función de "comprobarRoot" para hacerle saber al usuario final que debe logearse como root.*.
+> *Trabajando en este script, concretamente en la función "comprobarApache" nos dimos cuenta que a la hora de redireccionar el error a "/root/ApacheError.tmp" nos denegaría el permiso ya que necesitamos ser root. Decidimos añadir la típica función de "comprobarRoot" para hacerle saber al usuario final que debe logearse como root. Después nos dimos cuenta que también hacía falta que el script se iniciase 5 minutos despues de arrancar el sistema. Como solución introdujimos el script en /etc/rc.local para que así funcionase correctamente.*
 <br>
 <br>
 
