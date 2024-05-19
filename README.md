@@ -202,8 +202,8 @@ ComprobarApache &
 #!/bin/bash
 #Autor: Jose María Jaén, Alejandro Lamprea, Javier Barrero
 #Versión: 1.0
-#Fecha:
-#Descripción: Este script realiza ……….
+#Fecha: 16/05/24
+#Descripción: Este script nos permite elegir desde un menú diferentes opciones como bloquear usuarios, mostrar usuarios bloqueados y desbloquear usuarios.
 #Parámetros/Variables
 usuarios="/home/javi/TRABAJOSCRIPTS/usuarios.txt"
 usuariosBloqueados="/home/javi/TRABAJOSCRIPTS/bloqueados.txt"
@@ -588,7 +588,7 @@ cat "usuariosCreados-$fecha.tmp"
 <br>
 
 #### *Conclusiones generales*
-Los objetivos para la realización de este trabajo de scripts basados en bash creemos que se han cumplido. Se nos solicitaba detectar problemas de rendimiento monitorizando el sistema con las herramientas adecuadas documentando el proceso y también se nos indicaba auditar la utilización y acceso identificando y respectando la seguridad del sistema. Comparando detenidamente el trabajo que hemos realizado con lo que se nos solicitaba creemos que hemos estado a la altura aunque, por falta de tiempo la última semana de los miembros del grupo, el ejercicio nº5 no conseguimos sacarlo adelante.  
+Los objetivos para la realización de este trabajo de scripts basados en bash creemos que se han cumplido. Se nos solicitaba detectar problemas de rendimiento monitorizando el sistema con las herramientas adecuadas documentando el proceso y también se nos indicaba auditar la utilización y acceso identificando y respectando la seguridad del sistema. Comparando detenidamente el trabajo que hemos realizado con lo que se nos solicitaba creemos que hemos estado a la altura aunque, por falta de tiempo en la última semana de los miembros del grupo, el ejercicio nº5 no conseguimos sacarlo adelante.  
 
 
 #### *Conclusiones personales*
