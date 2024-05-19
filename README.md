@@ -1,8 +1,11 @@
 ![MasterHead](https://user-images.githubusercontent.com/74038190/213910845-af37a709-8995-40d6-be59-724526e3c3d7.gif)
 
-# **Trabajo bloque 5**
-![](https://img.shields.io/badge/scripts-orange?style=for-the-badge)           
-![](https://img.shields.io/badge/github-blue?style=for-the-badge)
+# <p align="center">*Trabajo Bloque 5*</p>
+### <p align="left">*Creación de scripts intermedios en Debian/Ubuntu*<p>
+En este proyecto trabajaremos detectando problemas de rendimiento monitorizando el sistema con las herramientas adecuadas y documentando el procedimiento
+
+### *Herramientas usadas*
+![Static Badge](https://img.shields.io/badge/Virtual-Box-blue?style=plastic)  ![Static Badge](https://img.shields.io/badge/Scripting-Bash-green?style=plastic)  ![Static Badge](https://img.shields.io/badge/Github-red?style=plastic) ![Static Badge](https://img.shields.io/badge/Markdown-Language-yellow?style=plastic)
 
 
 
@@ -10,27 +13,17 @@
 
 
 
-#### Trabajo realizado por Javier Barrero, Jose María Jaén y Alejandro Lamprea.
+
+
+
+
+<h5 align="right"> Trabajo realizado por Javier Barrero, Jose María Jaén y Alejandro Lamprea. </h5>
 <br>
 <br>
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 <img src="https://cdn-icons-png.flaticon.com/512/2037/2037149.png" style="width: 25px; height: 25px;"/> Índice  
  <br>
