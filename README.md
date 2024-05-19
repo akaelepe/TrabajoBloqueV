@@ -583,9 +583,16 @@ cat "usuariosCreados-$fecha.tmp"
 > [!NOTE]
 > Para algunos ejercicios  acudimos a apuntes de temas pasados y también alguna consulta a la inteligencia artificial.
 
+<br>
+<br>
+
+#### *Conclusiones generales*
+Los objetivos para la realización de este trabajo de scripts basados en bash creemos que se han cumplido. Se nos solicitaba detectar problemas de rendimiento monitorizando el sistema con las herramientas adecuadas documentando el proceso y también se nos indicaba auditar la utilización y acceso identificando y respectando la seguridad del sistema. Comparando detenidamente el trabajo que hemos realizado con lo que se nos solicitaba creemos que hemos estado a la altura aunque, por falta de tiempo la última semana de los miembros del grupo, el ejercicio nº5 no conseguimos sacarlo adelante.  
 
 
-
+#### *Conclusiones personales*
+> He aprendido mucho acerca de bash y su gestión combinando los conocimientos adquiridos en clase con la realizacion del trabajo en grupo con mis compañeros.
+-- Javier Barrero Vázquez.
 
 
 
